@@ -10,3 +10,16 @@
 
 # Output of the go coverage tool, specifically when used with LiteIDE
 *.out
+
+# Ignore the bin file of this project
+punk
+
+# Ignore the vsc settins
+.vscode
+
+# 所有node相关的模块均只是为了标准化信息提交
+/node_modules
+package.json
+package-lock.json
+.cz-config.js
+.vcmrc
