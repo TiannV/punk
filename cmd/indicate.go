@@ -4,7 +4,7 @@ package cmd
 // @Author: ant1wv2
 // @Contact: ant1wv2@gmail.com
 // @Last Modified By: ant1wv2
-// @Last Modified Time: Jul 7, 2019 11:38 PM
+// @Last Modified Time: Oct 31, 2019 11:30 AM
 // @Description: 指出命令，譬如指出本地ip，当前文件夹大小等等
 
 import (
@@ -16,12 +16,6 @@ import (
 	"github.com/fatih/color"
 	"github.com/spf13/cobra"
 )
-
-func init() {
-	rootCmd.AddCommand(indicateCmd)
-	indicateCmd.AddCommand(getIPCmd)
-	indicateCmd.AddCommand(getWeatherCmd)
-}
 
 // 父级命令
 var indicateCmd = &cobra.Command{
@@ -62,4 +56,10 @@ var getWeatherCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("这里需要添加获取天气信息的代码")
 	},
+}
+
+func init() {
+	rootCmd.AddCommand(indicateCmd)
+	indicateCmd.AddCommand(getIPCmd)
+	indicateCmd.AddCommand(getWeatherCmd)
 }

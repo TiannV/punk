@@ -4,7 +4,7 @@ package cmd
 // @Author: ant1wv2
 // @Contact: ant1wv2@gmail.com
 // @Last Modified By: ant1wv2
-// @Last Modified Time: Jul 7, 2019 11:38 PM
+// @Last Modified Time: Oct 31, 2019 11:35 AM
 // @Description: 为系统安装指定的软件
 
 import (
@@ -21,8 +21,7 @@ func init() {
 // 父级命令
 var installCmd = &cobra.Command{
 	Use:   "install",
-	Short: "Install softwares on indicated os",
-	Long:  `Install softwares on indicated operate system`,
+	Short: "Install softwares on specified OS",
 }
 
 // 子命令
