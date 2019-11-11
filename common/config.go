@@ -3,8 +3,8 @@ package common
 // @CreateTime: Nov 6, 2019 7:26 PM
 // @Author: ant1wv2
 // @Contact: ant1wv2@gmail.com
-// @Last Modified By: ant1wv2
-// @Last Modified Time: Nov 7, 2019 4:13 PM
+// @Last Modified By: tianwei
+// @Last Modified Time: Nov 11, 2019 4:08 PM
 // @Description: 利用Viper进行配置文件的读写
 
 import (
@@ -48,7 +48,7 @@ func init() {
 
 // IsConfigFileExsit 检查配置文件是否存在
 func IsConfigFileExsit() bool {
-	if fileRef, err := os.Stat(path.Join(HomeDir, configFileName)); err != nil || fileRef.IsDir() {
+	if fileRef, err := os.Stat(path.Join(HomeDir, configFile)); err != nil || fileRef.IsDir() {
 		return false
 	}
 	return true
